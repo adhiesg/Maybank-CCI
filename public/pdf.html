@@ -15,17 +15,21 @@
   <body>
     <div class='container'>
       <div>
-        <button class='btn btn-primary' id="prev">Previous</button>
-        <button class='btn btn-secondary' id="next">Next</button>
-        &nbsp; &nbsp;
-        <span
+        <canvas class="d-block" style="margin: auto;" id="the-canvas"></canvas>
+      </div>
+      <div class="row">
+        <div class="col">
+          <button class='btn btn-primary d-block' style="margin: auto;" id="prev">Previous</button>
+        </div>
+        <div class="col text-center">
+          <span
           >Page: <span id="page_num"></span> / <span id="page_count"></span
-        ></span>
+          ></span>
+        </div>
+        <div class="col">
+          <button class='btn btn-secondary d-block' style="margin: auto;" id="next">Next</button>
+        </div>
       </div>
-      <div>
-        <canvas id="the-canvas"></canvas>
-      </div>
-
     </div>
 
 

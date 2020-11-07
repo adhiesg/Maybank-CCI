@@ -1,7 +1,8 @@
 // If absolute URL from the remote server is provided, configure the CORS
 // header on that server.
 var url =
-  "https://raw.githubusercontent.com/mozilla/pdf.js/ba2edeae/web/compressed.tracemonkey-pldi-09.pdf";
+  './test.pdf'
+  // "https://raw.githubusercontent.com/mozilla/pdf.js/ba2edeae/web/compressed.tracemonkey-pldi-09.pdf";
   //"https://github.com/adhiesg/Maybank-CCI/blob/master/public/test.pdf?raw=true";
 
 // Loaded via <script> tag, create shortcut to access PDF.js exports.
@@ -15,7 +16,7 @@ var pdfDoc = null,
   pageNum = 1,
   pageRendering = false,
   pageNumPending = null,
-  scale = 2,
+  scale = 1.5,
   canvas = document.getElementById("the-canvas"),
   ctx = canvas.getContext("2d");
 
