@@ -31,3 +31,8 @@ html,
 body {
   background-color: #161a1f;
 }
+
+/* .carousel-inner > .item > img,
+.carousel-inner > .item > a > img {
+  width: 100%;
+} */
