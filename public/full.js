@@ -58,7 +58,6 @@ const zoomIn = () => {
     // queueRenderPage(pageNum);
 
     document.querySelectorAll('.canvas-wrapper').forEach((e) => e.remove());
-
     renderPages();
   }
 };
@@ -70,7 +69,9 @@ const zoomOut = () => {
     return;
   } else {
     scale = scale - 0.25;
-    queueRenderPage(pageNum);
+    // queueRenderPage(pageNum);
+    document.querySelectorAll('.canvas-wrapper').forEach((e) => e.remove());
+    renderPages();
   }
 };
 document.querySelector('#zoom-out').addEventListener('click', zoomOut);
