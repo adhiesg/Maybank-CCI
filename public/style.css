@@ -13,3 +13,21 @@ canvas,
   -o-background-size: cover;
   background-size: cover;
 }
+
+.canvas-wrapper {
+  margin: 5px auto 5px auto;
+}
+
+canvas {
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+.container-fluid {
+  background-color: #161a1f;
+}
+html,
+body {
+  background-color: #161a1f;
+}
