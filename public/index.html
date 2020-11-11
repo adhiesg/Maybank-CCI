@@ -15,109 +15,158 @@
   </head>
   <body>
     <!-- Navbar -->
-    <nav class="navbar sticky-top navbar-dark bg-dark">
-      <div class="container-fluid" style="background-color: #ffc600">
-        <a href="#" class="navbar-brand">Maybank</a>
+    <nav
+      class="navbar sticky-top navbar-dark shadow"
+      style="background-color: #ffc600"
+    >
+      <a href="#" class="navbar-brand" style="color: #212427">Maybank</a>
+      <div class="dropdown">
+        <button
+          class="btn dropdown-toggle"
+          type="button"
+          id="dropdownMenuButton"
+          data-toggle="dropdown"
+          aria-haspopup="true"
+          aria-expanded="false"
+          style="background-color: #ffc600; color: #212427"
+        >
+          2020
+        </button>
+        <div
+          class="dropdown-menu dropdown-menu-right"
+          aria-labelledby="dropdownMenuButton"
+        >
+          <a class="dropdown-item" href="#">January</a>
+          <a class="dropdown-item" href="#">February</a>
+          <a class="dropdown-item" href="#">March</a>
+        </div>
       </div>
+      <!-- <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+        <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+          <li class="nav-item active">
+            <a class="nav-link" href="#"
+              >Home <span class="sr-only">(current)</span></a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled" href="#">Disabled</a>
+          </li>
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+          <input
+            class="form-control mr-sm-2"
+            type="search"
+            placeholder="Search"
+          />
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">
+            Search
+          </button>
+        </form>
+      </div> -->
     </nav>
     <!-- Slider -->
-    <header>
-      <div
-        id="carouselExampleIndicators"
-        class="carousel slide"
-        data-ride="carousel"
-      >
-        <ol class="carousel-indicators">
-          <li
-            data-target="#carouselExampleIndicators"
-            data-slide-to="0"
-            class="active"
-          ></li>
-          <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-          <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-        </ol>
-        <div class="carousel-inner" role="listbox">
-          <!-- Slide One - Set the background image for this slide in the line below -->
-          <div
-            class="carousel-item active"
-            style="
-              background-image: url('https://source.unsplash.com/LAaSoL0LrYs/1920x1080');
-            "
-          >
-            <div class="carousel-caption d-md-block">
-              <h2 class="display-4">Kabar Maybank Indonesia</h2>
-              <p class="lead">Edisi 07 - Juli 2020</p>
-              <button
-                class="btn btn-primary"
-                onclick="window.open('./full.html')"
-              >
-                Baca Sekarang
-              </button>
+    <div class="container-fluid">
+      <header>
+        <div
+          id="carouselExampleIndicators"
+          class="carousel slide"
+          data-ride="carousel"
+        >
+          <ol class="carousel-indicators">
+            <li
+              data-target="#carouselExampleIndicators"
+              data-slide-to="0"
+              class="active"
+            ></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+          </ol>
+          <div class="carousel-inner" role="listbox">
+            <!-- Slide One - Set the background image for this slide in the line below -->
+            <div
+              class="carousel-item active"
+              style="
+                background-image: url('https://source.unsplash.com/LAaSoL0LrYs/1920x1080');
+              "
+            >
+              <div class="carousel-caption d-md-block">
+                <h2 class="display-4">Kabar Maybank Indonesia</h2>
+                <p class="lead">Edisi 07 - Juli 2020</p>
+                <button
+                  class="btn btn-primary"
+                  onclick="window.open('./full.html')"
+                >
+                  Baca Sekarang
+                </button>
+              </div>
             </div>
-          </div>
-          <!-- Slide Two - Set the background image for this slide in the line below -->
-          <div
-            class="carousel-item"
-            style="
-              background-image: url('https://source.unsplash.com/bF2vsubyHcQ/1920x1080');
-            "
-          >
-            <div class="carousel-caption d-md-block">
-              <h2 class="display-4">Kabar Maybank Indonesia</h2>
-              <p class="lead">Edisi 08 - Agustus 2020</p>
-              <button
-                class="btn btn-primary"
-                onclick="window.open('./single.html')"
-              >
-                Baca Sekarang
-              </button>
+            <!-- Slide Two - Set the background image for this slide in the line below -->
+            <div
+              class="carousel-item"
+              style="
+                background-image: url('https://source.unsplash.com/bF2vsubyHcQ/1920x1080');
+              "
+            >
+              <div class="carousel-caption d-md-block">
+                <h2 class="display-4">Kabar Maybank Indonesia</h2>
+                <p class="lead">Edisi 08 - Agustus 2020</p>
+                <button
+                  class="btn btn-primary"
+                  onclick="window.open('./single.html')"
+                >
+                  Baca Sekarang
+                </button>
+              </div>
             </div>
-          </div>
-          <!-- Slide Three - Set the background image for this slide in the line below -->
-          <div
-            class="carousel-item"
-            style="
-              background-image: url('https://source.unsplash.com/szFUQoyvrxM/1920x1080');
-            "
-          >
-            <div class="carousel-caption d-md-block">
-              <h2 class="display-4">Kabar Maybank Indonesia</h2>
-              <p class="lead">Edisi 09 - September 2020</p>
-              <!-- <a href="./pdf.html" type="button" class="btn btn-primary">
+            <!-- Slide Three - Set the background image for this slide in the line below -->
+            <div
+              class="carousel-item"
+              style="
+                background-image: url('https://source.unsplash.com/szFUQoyvrxM/1920x1080');
+              "
+            >
+              <div class="carousel-caption d-md-block">
+                <h2 class="display-4">Kabar Maybank Indonesia</h2>
+                <p class="lead">Edisi 09 - September 2020</p>
+                <!-- <a href="./pdf.html" type="button" class="btn btn-primary">
                 Baca Sekarang
               </a> -->
-              <button
-                class="btn btn-primary"
-                onclick="window.open('./single.html')"
-              >
-                Baca Sekarang
-              </button>
+                <button
+                  class="btn btn-primary"
+                  onclick="window.open('./single.html')"
+                >
+                  Baca Sekarang
+                </button>
+              </div>
             </div>
           </div>
+          <a
+            class="carousel-control-prev"
+            href="#carouselExampleIndicators"
+            role="button"
+            data-slide="prev"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a
+            class="carousel-control-next"
+            href="#carouselExampleIndicators"
+            role="button"
+            data-slide="next"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </a>
         </div>
-        <a
-          class="carousel-control-prev"
-          href="#carouselExampleIndicators"
-          role="button"
-          data-slide="prev"
-        >
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="sr-only">Previous</span>
-        </a>
-        <a
-          class="carousel-control-next"
-          href="#carouselExampleIndicators"
-          role="button"
-          data-slide="next"
-        >
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="sr-only">Next</span>
-        </a>
-      </div>
-    </header>
+      </header>
+    </div>
 
     <!-- Content -->
-    <section class="py-5">
+    <!-- <section class="py-5">
       <div class="container">
         <h1 class="display-4">Full Page Image Slider</h1>
         <p class="lead">
@@ -127,7 +176,7 @@
           <a href="https://unsplash.com/@joannakosinska">Joanna Kosinska</a>!
         </p>
       </div>
-    </section>
+    </section> -->
 
     <script
       src="https://code.jquery.com/jquery-3.3.1.slim.min.js"

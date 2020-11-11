@@ -3,11 +3,10 @@ const url = './test.pdf';
 let pdfDoc = null,
   pageNum = 1,
   pageIsRendering = false,
-  pageNumIsPending = null;
+  pageNumIsPending = null,
+  scale = 1;
 
-const scale = 1.25,
-  // canvas = document.querySelector('#pdf-render'),
-  canvasContainer = document.getElementById('holder');
+const canvasContainer = document.getElementById('holder');
 
 const renderPage = (num) => {
   pageIsRendering = true;
@@ -31,9 +30,9 @@ const renderPage = (num) => {
   });
 };
 
-const renderPages = (pdfDoc) => {
+const renderPages = () => {
   for (let num = 1; num <= pdfDoc.numPages; num++) {
-    pdfDoc.getPage(num).then(renderPage);
+    pdfDoc.getPage(num).then(renderPage(num));
   }
 };
 
@@ -44,7 +43,34 @@ pdfjsLib.getDocument(url).promise.then((pdfDoc_) => {
 
   // renderPages(pageNum);
   // renderPage(pageNum);
-  for (let num = 1; num <= pdfDoc.numPages; num++) {
-    pdfDoc.getPage(num).then(renderPage(num));
-  }
+  // for (let num = 1; num <= pdfDoc.numPages; num++) {
+  //   pdfDoc.getPage(num).then(renderPage(num));
+  // }
+  renderPages();
 });
+
+// Zoom In
+const zoomIn = () => {
+  if (scale >= 5) {
+    return;
+  } else {
+    scale = scale + 0.25;
+    // queueRenderPage(pageNum);
+
+    document.querySelectorAll('.canvas-wrapper').forEach((e) => e.remove());
+
+    renderPages();
+  }
+};
+document.querySelector('#zoom-in').addEventListener('click', zoomIn);
+
+// Zoom Out
+const zoomOut = () => {
+  if (scale <= 1) {
+    return;
+  } else {
+    scale = scale - 0.25;
+    queueRenderPage(pageNum);
+  }
+};
+document.querySelector('#zoom-out').addEventListener('click', zoomOut);
