@@ -104,7 +104,7 @@
                 <p class="lead">Edisi 07 - Juli 2020</p>
                 <button
                   class="btn btn-primary"
-                  onclick="window.open('./single.html')"
+                  onclick="localStorage.setItem('month', 'juli'); window.open('./single.html')"
                 >
                   Baca Sekarang
                 </button>
@@ -129,7 +129,7 @@
                 <p class="lead">Edisi 06 - Juni 2020</p>
                 <button
                   class="btn btn-primary"
-                  onclick="window.open('./single.html')"
+                  onclick="localStorage.setItem('month', 'juni'); window.open('./single.html')"
                 >
                   Baca Sekarang
                 </button>
@@ -155,7 +155,7 @@
                 <p class="lead">Edisi 05 - Mei 2020</p>
                 <button
                   class="btn btn-primary"
-                  onclick="window.open('./single.html')"
+                  onclick="localStorage.setItem('month', 'mei'); window.open('./single.html')"
                 >
                   Baca Sekarang
                 </button>
@@ -212,5 +212,8 @@
       integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
       crossorigin="anonymous"
     ></script>
+    <script>
+      localStorage.setItem('month', value);
+    </script>
   </body>
 </html>

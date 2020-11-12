@@ -1,5 +1,7 @@
 // PDF Location
-const url = './test.pdf';
+let month = localStorage.getItem('month');
+const url = './' + month + '20.pdf';
+// const url = './test.pdf';
 
 // The PDF Document itself
 let pdfDoc = null,
@@ -104,3 +106,6 @@ const zoomOut = () => {
   }
 };
 document.querySelector('#zoom-out').addEventListener('click', zoomOut);
+
+// let month = document.getElementById('#month');
+// console.log(month.value);
