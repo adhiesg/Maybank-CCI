@@ -5,6 +5,9 @@
 
 canvas,
 #the-canvas {
+  background: url('./Spinner.svg');
+  background-repeat: no-repeat;
+  background-position: center;
   border: 1px solid black;
   direction: ltr;
 }

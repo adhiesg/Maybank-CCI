@@ -76,14 +76,28 @@ const prevPage = () => {
 };
 document.querySelector('#prev').addEventListener('click', prevPage);
 
-// Get Document
-pdfjsLib.getDocument(url).promise.then((pdfDoc_) => {
-  pdfDoc = pdfDoc_;
-  document.querySelector('#page-count').textContent = pdfDoc.numPages;
-  console.log(pdfDoc);
+const insertAfter = (referenceNode, newNode) => {
+  referenceNode.parentNode.insertBefore(newNode, referenceNode.nextSibling);
+};
 
-  renderPage(pageNum);
-});
+// Get Document
+pdfjsLib
+  .getDocument(url)
+  .promise.then((pdfDoc_) => {
+    pdfDoc = pdfDoc_;
+    document.querySelector('#page-count').textContent = pdfDoc.numPages;
+    console.log(pdfDoc);
+
+    renderPage(pageNum);
+  })
+  .catch((error) => {
+    console.log(error);
+    const alert = document.createElement('div');
+    alert.classList.add('alert', 'alert-warning', 'text-center');
+    alert.appendChild(document.createTextNode(error.message));
+    const parentdiv = document.getElementById('canvas-wrapper');
+    insertAfter(parentdiv, alert);
+  });
 
 // Zoom In
 const zoomIn = () => {
@@ -106,6 +120,3 @@ const zoomOut = () => {
   }
 };
 document.querySelector('#zoom-out').addEventListener('click', zoomOut);
-
-// let month = document.getElementById('#month');
-// console.log(month.value);
