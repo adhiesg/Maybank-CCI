@@ -1,4 +1,9 @@
-const url = './test.pdf';
+// const url = './test.pdf';
+
+// PDF Location
+let month = localStorage.getItem('month');
+let year = localStorage.getItem('year')
+const url = './' + month + year + '.pdf';
 
 let pdfDoc = null,
   pageNum = 1,

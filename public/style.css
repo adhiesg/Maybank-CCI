@@ -5,7 +5,7 @@
 
 canvas,
 #the-canvas {
-  background: url('./Spinner.svg');
+  background: url("./Spinner.svg");
   background-repeat: no-repeat;
   background-position: center;
   border: 1px solid black;
@@ -44,3 +44,7 @@ body {
 .carousel-inner > .item > a > img {
   width: 100%;
 } */
+
+li {
+  list-style-type: none;
+}

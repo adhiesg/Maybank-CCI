@@ -1,6 +1,7 @@
 // PDF Location
 let month = localStorage.getItem('month');
-const url = './' + month + '20.pdf';
+let year = localStorage.getItem('year')
+const url = './' + month + year + '.pdf';
 // const url = './test.pdf';
 
 // The PDF Document itself
